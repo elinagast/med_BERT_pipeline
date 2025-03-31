@@ -3,10 +3,10 @@
 This repository provides a pipeline for training and evaluating a German Med-BERT model for medical text classification. The script supports both training and prediction modes.
 
 ## 🚀 Features
-	•	Preprocesses medical text data for training and inference.
-	•	Trains a multi-label classification model using GerMedBERT.
-	•	Evaluates model performance and generates plots (confusion matrices, training progress).
-	•	Supports inference on new medical text data.
+- Preprocesses medical text data for training and inference.
+- Trains a multi-label classification model using GerMedBERT.
+- Evaluates model performance and generates plots (confusion matrices, trainingprogress).
+- Supports inference on new medical text data.
 
 ## Installation
 ### Clone Repository
