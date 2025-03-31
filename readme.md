@@ -41,7 +41,7 @@ python main.py --mode predict --data path/to/data.csv --rp results_dir --t text_
 |Argument|Description|Input type|
 |:-----|:-----|:-----|
 |--mode|Takes train or predict. Runs the training or prediction process.|train/predict|
-|--data|Path to the dataset or directory for inference.|Path|
+|--data|Path to the dataset or directory for inference. Allowed Data types: csv, excel|Path|
 |--rp|Directory where results will be saved.|Path|
 |--t|Name of the text column(s) (Must be the same for all input datasets).|String/String list|
 |-model_name|Name of the text column(s) (Must be the same for all input datasets). Uses GerMEDBert as default. |Path/None|
