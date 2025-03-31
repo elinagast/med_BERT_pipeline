@@ -25,25 +25,33 @@ The script supports two modes:
 	•	Training (train)
 	•	Prediction (predict)
 
-🔹 1️⃣ Training Mode
 
+🔹 **Training** Mode
 Train the German Med-BERT model using labeled medical text data.
 ```
 python main.py --mode train --data path/to/data.csv --rp results_dir --t text_column_name
 ```
 
-|Argument|Description|
-|--mode|Takes train or predict. Runs the training or prediction process.|
-|--data|Path to the dataset or directory for inference.|
-|--rp|Directory where results will be saved.|
-|--t|Name of the text column(s) (Must be the same for all input datasets).|
+🔹 **Prediction** Mode
+Use the trained model to make predictions on new data.
+```
+python main.py --mode predict --data path/to/data.csv --rp results_dir --t text_column_name -model_name path/to/results_dir
+```
+
+|Argument|Description|Input type|
+|:-----|:-----|:-----|
+|--mode|Takes train or predict. Runs the training or prediction process.|train/predict|
+|--data|Path to the dataset or directory for inference.|Path|
+|--rp|Directory where results will be saved.|Path|
+|--t|Name of the text column(s) (Must be the same for all input datasets).|String/String list|
+|-model_name|Name of the text column(s) (Must be the same for all input datasets). Uses GerMEDBert as default. |Path/None|
 
 ## 📊 Output
-	•	Trained Model (results_dir/results/)
-	•	Evaluation Metrics (F1-score, accuracy, loss)
-	•	Plots:
-	•	Confusion Matrix (training_confusion_matrix.png)
-	•	Training Progress (training_loss.png, training_f1.png, training_accuracy.png)
+- Finetuned Model (results_dir/results/)
+- Evaluation Metrics (F1-score, accuracy, loss)
+- Plots:
+    - Confusion Matrix (training_confusion_matrix.png)
+    - Training Progress (training_loss.png, training_f1.png, training_accuracy.png)
 
 ## 🛠 Project Structure
 
