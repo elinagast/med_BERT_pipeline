@@ -44,7 +44,7 @@ python main.py --mode predict --data path/to/data.csv --rp results_dir --t text_
 |--data|Path to the dataset or directory for inference. Allowed Data types: csv, excel|Path|
 |--rp|Directory where results will be saved.|Path|
 |--t|Name of the text column(s) (Must be the same for all input datasets).|String/String list|
-|-model_name|Name of the text column(s) (Must be the same for all input datasets). Uses GerMEDBert as default. |Path/None|
+|-model_name|Name of the text column(s) (Must be the same for all input datasets). Uses [GerMedBERT](https://huggingface.co/GerMedBERT/medbert-512) as default. |Path/None|
 
 ## 📊 Output
 - Finetuned Model (results_dir/results/)
@@ -69,6 +69,6 @@ python main.py --mode predict --data path/to/data.csv --rp results_dir --t text_
 
 ## 📢 Acknowledgment
 
-This project leverages GerMedBERT, a pretrained transformer model for medical NLP in German. Model available on Hugging Face.
+This project leverages [GerMedBERT](https://huggingface.co/GerMedBERT/medbert-512), a pretrained transformer model for medical NLP in German. Model available on Hugging Face.
 
-For more details, visit GerMedBERT on Hugging Face.
+For more details, visit [GerMedBERT](https://huggingface.co/GerMedBERT/medbert-512) on Hugging Face.
