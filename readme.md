@@ -4,14 +4,14 @@ This repository provides a pipeline for training and evaluating a German Med-BER
 
 ## 🚀 Features
 - Preprocesses medical text data for training and inference.
-- Trains a multi-label classification model using GerMedBERT.
+- Trains a multi-label classification model using [GerMedBERT](https://huggingface.co/GerMedBERT/medbert-512).
 - Evaluates model performance and generates plots (confusion matrices, trainingprogress).
 - Supports inference on new medical text data.
 
 ## Installation
 ### Clone Repository
 ```
-git clone https://github.com/your-repo-name.git
+git clone https://git.rz.uni-augsburg.de/minsci-kap/kap24-nlprad-gastreel.git
 cd your-repo-name
 ```
 ### Install Dependencies
