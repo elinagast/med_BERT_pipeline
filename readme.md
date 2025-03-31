@@ -1,4 +1,4 @@
-# German Med-BERT Training and Prediction
+# [GerMedBERT](https://huggingface.co/GerMedBERT/medbert-512) Training and Prediction
 
 This repository provides a pipeline for training and evaluating a German Med-BERT model for medical text classification. The script supports both training and prediction modes.
 
