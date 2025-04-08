@@ -7,6 +7,7 @@ import numpy as np
 
 def train_model(train_texts, val_texts, train_labels, val_labels, model_name, dest_path):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     
     # Texte tokenisieren
     train_encodings = tokenizer(train_texts, padding='max_length', truncation=True)
@@ -21,23 +22,23 @@ def train_model(train_texts, val_texts, train_labels, val_labels, model_name, de
         model_name, 
         num_labels=len(val_labels[0]),  # Anzahl der Labels (z. B. Fieber, Husten, Müdigkeit)
         problem_type="multi_label_classification"
-    )
+    ).to(device)
 
     # Trainingsparameter
     training_args = TrainingArguments(
         output_dir=f"{dest_path}/results",
         evaluation_strategy="epoch",
         save_strategy="epoch",
-        learning_rate=4e-5,
-        per_device_train_batch_size=24,
-        per_device_eval_batch_size=24,
-        num_train_epochs=15,
+        learning_rate=3e-5,
+        per_device_train_batch_size=32,
+        per_device_eval_batch_size=32,
+        num_train_epochs=400,
         logging_dir="./logs",
         load_best_model_at_end=True,
         save_total_limit=500,
         logging_steps=10
     )
-
+    
     # Trainer initialisieren
     return Trainer(
         model=model,
@@ -50,8 +51,11 @@ def train_model(train_texts, val_texts, train_labels, val_labels, model_name, de
 
 # Metrics
 def compute_metrics(eval_pred):
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     logits, labels = eval_pred
-    predictions = torch.sigmoid(torch.tensor(logits)) > 0.5  # Schwellenwert für Multi-Label
+    predictions = torch.sigmoid(torch.tensor(logits, device=device)) > 0.5  # Schwellenwert für Multi-Label
+
+    predictions = predictions.cpu().numpy()
 
     # Initialisierung einer Liste, um Confusion Matrices für jedes Label zu speichern
     confusion_matrices = []

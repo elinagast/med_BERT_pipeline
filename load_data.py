@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import csv
 
-
 def read_dir(directory):
     data = pd.DataFrame()
     for path, _, files in os.walk(directory):

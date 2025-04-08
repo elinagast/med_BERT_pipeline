@@ -5,7 +5,6 @@ import load_data
 import model_prep
 import plot_results
 import models
-import numpy as np
 
 parser = argparse.ArgumentParser('Training and Predicting for a German Med-Bert Algorithm')
 parser.add_argument('--rp', action='store', dest='results_path', type=str)
@@ -36,7 +35,6 @@ if args.data:
         data = load_data.read_dir(args.data)
     if os.path.isfile(args.data):
         data = load_data.read_file(args.data)
-    
 
 if args.mode == 'train':
     train_texts, val_texts, train_labels, val_labels = preprocess_training(data)
