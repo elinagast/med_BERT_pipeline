@@ -11,7 +11,7 @@ This repository provides a pipeline for training and evaluating a German Med-BER
 ## Installation
 ### Clone Repository
 ```
-git clone https://git.rz.uni-augsburg.de/minsci-kap/kap24-nlprad-gastreel.git
+git clone https://github.com/elinagast/med_BERT_pipeline.git
 ```
 ### Install Dependencies
 ```
