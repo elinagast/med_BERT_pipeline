@@ -87,6 +87,8 @@ This model predicts on the following diseases:
 - Nebennierenraumforderung
 - Knochenmetastase
 - Degenerative_Skelettveränderungen
+  
+![training_all_metrics](https://github.com/user-attachments/assets/912922cc-d43e-4729-b327-3e479447b42a)
 
 
 ## 📢 Acknowledgment
