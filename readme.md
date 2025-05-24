@@ -66,6 +66,29 @@ python main.py --mode predict --data path/to/data.csv --rp results_dir --t text_
 │── results/                   # Directory for model outputs and plots
 ```
 
+## Inference
+Download a pretrained model [here](https://mega.nz/file/iZlE2YhI#6TOFhoL9m8E5m-HF4U9jwL-lBjIyu8a3k_pzyhc3Dhc).
+This model predicts on the following diseases:
+- SchilddrüsenläsioStruma
+- Lungenmetastasen
+- Lungenoduli_Granulome_(nicht_suspekt)
+- Arteriosklerose
+- Pleuraerguss
+- Perikarderguss
+- Pneumonie
+- Leberzysten
+- Lebermetastasen
+- Gallensteine
+- Nierenzysten
+- Aszites_Freie_flüssigkeit
+- Lymphadenopathie
+- Maligner_tumor
+- Entzündlicher_prozess
+- Nebennierenraumforderung
+- Knochenmetastase
+- Degenerative_Skelettveränderungen
+
+
 ## 📢 Acknowledgment
 
 This project leverages [GerMedBERT](https://huggingface.co/GerMedBERT/medbert-512), a pretrained transformer model for medical NLP in German. Model available on Hugging Face.
